@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RisoLand - Krispi di Luar, Lumer di Dalam</title>
+    <title>RisoLand - Risol Kekinian</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
@@ -11,7 +11,21 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(90deg, #f59e0b, #ef4444); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text-1 { color: #ff4500; text-shadow: 1px 1px 0px #ff6600, 2px 2px 0px #ff7700, 3px 3px 0px #ff8800, 4px 4px 0px #ff9900, 5px 5px 0px #ffaa00, 6px 6px 0px #ffbb00; -webkit-text-stroke: 1px #000; }
+        .gradient-text-2 { color: #ff4500; text-shadow: 1px 1px 0px #ff0000, 2px 2px 0px #00ff00, 3px 3px 0px #0000ff, 4px 4px 0px #ffff00, 5px 5px 0px #ff00ff, 6px 6px 0px #00ffff; -webkit-text-stroke: 1px #000; }
+        .gradient-text-3 { color: #ff4500; text-shadow: 1px 1px 0px #ff4500, 2px 2px 0px #ff4500, 3px 3px 0px #ff4500, 4px 4px 0px #ff4500, 5px 5px 0px #ff4500, 6px 6px 0px #ff4500; -webkit-text-stroke: 1px #000; }
+        .bg-slider { background: url('BG.jpg') no-repeat center center; background-size: cover; animation: slide 20s infinite; }
+        @keyframes slide {
+            0% { background-image: url('BG.jpg'); }
+            12.5% { background-image: url('Risol mayo.jpg'); }
+            25% { background-image: url('Risol Ayam Suwir.jpg'); }
+            37.5% { background-image: url('Risol Jasuke.jpg'); }
+            50% { background-image: url('Risol Pisang Coklat.jpg'); }
+            62.5% { background-image: url('Risol Rogut.jpg'); }
+            75% { background-image: url('Risol Sayur Pedas.jpg'); }
+            87.5% { background-image: url('halal.jpg'); }
+            100% { background-image: url('BG.jpg'); }
+        }
     </style>
 </head>
 <body class="bg-orange-50 text-slate-800">
@@ -20,7 +34,7 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
                 <img src="logo risoland.png" alt="RisoLand Logo" class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover">
-                <h1 class="text-xl md:text-2xl font-extrabold tracking-tighter text-orange-600">Riso<span class="text-red-500">Land</span></h1>
+                <h1 class="text-xl md:text-2xl font-extrabold tracking-tighter text-orange-600">Riso<span class="text-red-500">Land <br><span class="text-sm">Nganjuk - Jawa Timur</span></span></h1>
             </div>
             <div class="hidden md:flex space-x-8 font-semibold">
                 <a href="#home" class="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition">Beranda</a>
@@ -44,13 +58,13 @@
         </div>
     </nav>
 
-    <section id="home" class="pt-24 md:pt-32 pb-20 px-6 relative" style="background: url('BG.jpg') no-repeat center center; background-size: cover;">
+    <section id="home" class="pt-24 md:pt-32 pb-20 px-6 relative bg-slider">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="container mx-auto text-center relative z-10" data-aos="fade-up">
-            <span class="bg-orange-200 text-orange-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Premium Homemade Risol</span>
-            <h2 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mt-6 mb-6 text-white" style="font-family: 'Oswald', sans-serif; font-weight: 900;">Nikmati Sensasi <br><span class="gradient-text">Risol Kekinian <br>6 Varian Rasa !</span></h2>
+            <span class="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider shadow-lg transform hover:scale-105 transition-all duration-300" style="font-family: 'Oswald', sans-serif; letter-spacing: 0.1em;">Premium Homemade Risol</span>
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mt-6 mb-6 text-white" style="font-family: 'Oswald', sans-serif; font-weight: 900;"><span class="gradient-text">RisoLand</span> <br><span class="text-white">Risol Kekinian</span> <br><span class="gradient-text">6 Varian Rasa !</span></h2>
             <p class="text-base sm:text-lg text-white max-w-2xl mx-auto mb-6" style="font-family: 'Oswald', sans-serif; font-weight: 700;">Camilan krispi dengan isian melimpah yang siap memanjakan lidahmu. Dari gurihnya daging hingga manisnya cokelat lumer.</p>
-            <p class="text-lg text-white mb-10 flex items-center justify-center gap-2"><i class="fas fa-clock text-orange-500"></i>Jam Buka: 10.00 - 20.00</p>
+            <p class="text-lg text-white mb-10 flex items-center justify-center gap-2"><span class="bg-orange-500 px-4 py-2 rounded-full shadow-lg"><i class="fas fa-clock text-white mr-2"></i>Jam Buka: 10.00 - 20.00 WIB (Buka Setiap Hari)</span></p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#menu" class="bg-orange-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:shadow-lg hover:shadow-orange-200 transition-all transform hover:-translate-y-1">Lihat Menu Utama</a>
             </div>
@@ -60,10 +74,24 @@
     <section id="menu" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h3 class="text-3xl font-extrabold mb-4 text-slate-900">6 Varian Rasa Favorit</h3>
-                <div class="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
-                <p class="text-lg text-slate-600 mt-4"><i class="fas fa-snowflake text-blue-500"></i> Tersedia Kemasan Frozen</p>
-                <p class="text-lg text-slate-600 mt-2"><i class="fas fa-boxes text-green-500"></i> Menerima pesanan dalam jumlah banyak untuk Acara atau ingin menjadi Reseller</p>
+                <h3 class="text-3xl font-extrabold mb-4 text-slate-900 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">6 Varian RisoLand</h3>
+       <div class="w-20 h-1.5 bg-orange-500 mx-auto rounded-full"></div>
+                <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+                    <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-200/50 transition-all duration-500 transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-snowflake text-4xl text-blue-500 animate-pulse"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">Tersedia Kemasan Frozen</h4>
+                        <p class="text-slate-600">Nikmati RisoLand kapan saja dengan kemasan frozen premium kami.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-2xl border-2 border-green-200 hover:border-green-400 hover:shadow-xl hover:shadow-green-200/50 transition-all duration-500 transform hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-boxes text-4xl text-green-500 animate-bounce"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">Pesanan Grosir</h4>
+                        <p class="text-slate-600">Menerima pesanan dalam jumlah banyak untuk acara atau ingin menjadi reseller.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -74,6 +102,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Beef Mayo</h4>
                     <p class="text-slate-600 mb-4">Dengan isian smokeed beef, telur, dan saos mayonais.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 3.000</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
@@ -87,6 +121,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Ayam Suwir</h4>
                     <p class="text-slate-600 mb-4">Isian full ayam suwir dengan sensasi gurih dan pedas yang nikmat.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 3.000</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
@@ -99,6 +139,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Jasuke Creamy</h4>
                     <p class="text-slate-600 mb-4">Perpaduan Jagung, Susu dan Keju. Memiliki cita rasa yang manis dan gurih sangat creamy di mulut.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 2.500</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
@@ -111,6 +157,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Pisang Cokelat</h4>
                     <p class="text-slate-600 mb-4">Kenikmatan coklat dan potongan buah pisang yang tak tertandingi enaknya.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 2.500</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
@@ -123,6 +175,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Rogut</h4>
                     <p class="text-slate-600 mb-4">Dengan isian Wortel, Kentang, Telur dan sosis dengan cita rasa gurih yang nikmat.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 2.500</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
@@ -135,6 +193,12 @@
                     </div>
                     <h4 class="text-2xl font-bold mb-2">Risol Sayur Pedas</h4>
                     <p class="text-slate-600 mb-4">Sayuran segar dengan racikan cabai yang nendang.</p>
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold text-orange-600">Harga:</p>
+                        <p class="text-sm text-slate-700">Outlet: Rp 2.500</p>
+                        <p class="text-sm text-slate-700">Grabfood: Rp 4.500</p>
+                        <p class="text-sm text-slate-700">Shopefood: Rp 4.500</p>
+                    </div>
                     <div class="flex gap-2 mt-4">
                         <a href="https://r.grab.com/g/2-1-6-C7BFMALEL4NERX" class="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition gap-2"><i class="fas fa-utensils"></i>Order via Grabfood</a>
                         <a href="https://shopee.co.id/universal-link/now-food/shop/22351647?deep_and_deferred=1&shareChannel=copy_info" class="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-orange-600 transition gap-2"><i class="fas fa-shopping-bag"></i>Order via Shopeefood</a>
