@@ -161,10 +161,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close modal on Escape key
+// Close modal on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
             closeModal();
         }
     });
 });
+
+// Filter Products Function
+function filterProducts(category) {
+    const products = document.querySelectorAll('.product-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Update button active state
+    buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+            btn.classList.add('bg-orange-600', 'text-white');
+            btn.classList.remove('bg-white', 'text-orange-600', 'border', 'border-orange-300');
+        } else {
+            btn.classList.remove('bg-orange-600', 'text-white');
+            btn.classList.add('bg-white', 'text-orange-600', 'border', 'border-orange-300');
+        }
+    });
+    
+    // Filter products
+    products.forEach(product => {
+        const productCategory = product.dataset.category;
+        
+        if (category === 'all' || productCategory === category) {
+            product.style.display = 'block';
+            product.classList.add('animate__animated', 'animate__fadeIn');
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
